@@ -27,6 +27,20 @@ double User::getBalance() const
     return balance_;
 }
 
+vector<Product*>& User::getCart() 
+{
+	return cart_; 
+}
+
+void User::setBalance(double balance)
+{
+	balance_ = balance; 
+}
+
+void User::setCart(vector<Product*>& newCart){
+	cart_ = newCart; 
+}
+
 void User::deductAmount(double amt)
 {
     balance_ -= amt;
